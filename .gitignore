@@ -1,0 +1,12 @@
+# Files #
+*.jar
+*.war
+*.ear
+*.iml
+# Folders #
+.idea/
+build/
+.gradle/
+.sass-cache/
+*.fileTracker.data
+gradle.properties
