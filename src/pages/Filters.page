@@ -1,0 +1,42 @@
+<apex:page controller="RecruitmentConfigWizardController" action="{!Init}">  
+<apex:sectionHeader title="Filter content" subtitle="New Filter"/>
+  <!--<apex:form >
+      <apex:pageBlock title="Custom Objects"> 
+          
+          <apex:selectList value="{!ObjectsName}" multiselect="true">
+            <apex:selectOptions value="{!objects}"/>
+          </apex:selectList><p/>               
+          
+          <apex:pageBlockButtons style="text-align:right;">
+            <apex:commandButton styleclass="btn" value="Previous" action="{!GoPrevious}"/>
+            <apex:commandButton styleclass="btn" value="Next" action="{!GoNext}"/>
+          </apex:pageBlockButtons>
+                
+      </apex:pageBlock>
+   </apex:form>-->
+         
+   <!--<apex:pageBlock >
+        <apex:pageBlockTable value="{!Objects}" var="objetName">
+            <apex:column value="{!objetName}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>-->
+    
+     <apex:form >
+        <apex:selectCheckboxes value="{!ObjectsName}">
+            <apex:selectOptions value="{!objects}"/>
+        </apex:selectCheckboxes><br/>
+        <apex:commandButton value="Test" action="{!test}" rerender="out" status="status"/>
+    </apex:form>
+
+    <apex:outputPanel id="out">
+        <apex:actionstatus id="status" startText="testing...">
+            <apex:facet name="stop">
+                <apex:outputPanel >
+                    <p>You have selected:</p>
+                    <apex:dataList value="{!ObjectsName}" var="c">{!c}</apex:dataList>
+                </apex:outputPanel>
+            </apex:facet>
+        </apex:actionstatus>
+    </apex:outputPanel>
+
+</apex:page>
