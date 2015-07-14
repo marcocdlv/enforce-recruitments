@@ -1,3 +1,4 @@
+// Some comments
 public class ContentActionsController {
     public List<ContentAction__c> ContentActionsList {
         get;
@@ -8,4 +9,5 @@ public class ContentActionsController {
         ContentActionsList = [SELECT Id, Name, Available__c FROM ContentAction__c LIMIT 2000];
         return null;
     }
+    
 }
