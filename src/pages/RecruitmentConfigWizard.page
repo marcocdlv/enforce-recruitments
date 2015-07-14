@@ -1,0 +1,12 @@
+<apex:page controller="RecruitmentConfigWizardController">
+ <apex:pageBlock >
+     <apex:tabPanel value="{!CurrentTab}">
+         <apex:tab id="tabEntitySelection" label="Entity Selection" >
+            <apex:include pageName="EntitySelection"/>
+         </apex:tab>
+         <apex:tab id="tabActions" label="Actions" >
+            <apex:include pageName="ContentActions"/>
+         </apex:tab>
+     </apex:tabPanel>
+ </apex:pageBlock>
+</apex:page>
