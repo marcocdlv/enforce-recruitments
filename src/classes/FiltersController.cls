@@ -15,8 +15,8 @@ public class FiltersController {
     public List<SelectOption> getObjects() {
         List<SelectOption> options = new List<SelectOption>();
         for(String objectName : ObjectsName) {
-            string notation = objectName.substring(objectName.length() - 3, objectName.length());            
-            if (notation == '__c') {
+            string notation = objectName.substring(objectName.length() - 4, objectName.length() - 1);
+            if (true) {
                 options.add(new SelectOption(objectName, objectName));
             }
             
@@ -25,19 +25,33 @@ public class FiltersController {
     }
     
     public List<SelectOption> getItems() {
+
             List<SelectOption> options = new List<SelectOption>();
+
             options.add(new SelectOption('CustomField','CustomField'));
+
             options.add(new SelectOption('FieldSet','FieldSet'));
-            options.add(new SelectOption('ValidationRule','ValidationRule'));            
-            options.add(new SelectOption('CompactLayout','CompactLayout'));            
-            options.add(new SelectOption('SharingReason','SharingReason'));            
-            options.add(new SelectOption('RecordType','RecordType'));            
-            options.add(new SelectOption('WebLink','WebLink'));           
-            options.add(new SelectOption('SharingRecalculation','SharingRecalculation'));            
-            options.add(new SelectOption('SearchLayout','SearchLayout'));            
-            options.add(new SelectOption('ListView','ListView'));            
-            options.add(new SelectOption('BusinessProcess','BusinessProcess'));            
+
+            options.add(new SelectOption('ValidationRule','ValidationRule'));
+            
+            options.add(new SelectOption('CompactLayout','CompactLayout'));
+            
+            options.add(new SelectOption('SharingReason','SharingReason'));
+            
+            options.add(new SelectOption('RecordType','RecordType'));
+            
+            options.add(new SelectOption('WebLink','WebLink'));
+            
+            options.add(new SelectOption('SharingRecalculation','SharingRecalculation'));
+            
+            options.add(new SelectOption('SearchLayout','SearchLayout'));
+            
+            options.add(new SelectOption('ListView','ListView'));
+            
+            options.add(new SelectOption('BusinessProcess','BusinessProcess'));
+            
             options.add(new SelectOption('ActionOverride','ActionOverride'));
+
             return options;
     }
     
