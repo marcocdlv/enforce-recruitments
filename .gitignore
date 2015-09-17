@@ -9,4 +9,5 @@ build/
 .gradle/
 .sass-cache/
 *.fileTracker.data
+*.customComponentTracker.data
 gradle.properties
