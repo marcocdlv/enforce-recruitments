@@ -4,6 +4,11 @@ public class ContentActionsController {
         set;
     }
     
+    public List<Actions__c> actions {
+    get;
+    set;
+  }
+    
     public PageReference Init() {
         ContentActionsList = [SELECT Id, Name, Available__c FROM ContentAction__c LIMIT 2000];
         return null;
