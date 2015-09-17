@@ -1,0 +1,26 @@
+<!--
+  == Copyright (c) 2015 by {YOUR_COMPANY_NAME}, Inc. All Rights Reserved.
+  == This software is the confidential and proprietary information of
+  == {YOUR_COMPANY_NAME}, Inc. ("Confidential Information").
+  == You may not disclose such Confidential Information, and may only
+  == use such Confidential Information in accordance with the terms of
+  == the license agreement you entered into with {YOUR_COMPANY_NAME}.
+  -->
+
+<!--
+  -  Description
+  -
+  -  @author 
+  -->
+<apex:page showHeader="true" sidebar="true" controller="AppInformationController">
+    <apex:pageBlock title="{!AppName}" >
+        <apex:pageBlockSection columns="1">
+            <apex:outputText label="App Prefix" value="{!AppPrefix}" />
+            <apex:outputText label="App Version" value="{!AppVersion}" />
+            <apex:outputText label="App Language" value="{!AppLanguage}" />
+            <apex:outputText label="Current User" value="{!CurrentUser}" />
+            <apex:outputText label="Current User Language" value="{!CurrentUserLanguage}" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <c:AppInformation />
+</apex:page>
