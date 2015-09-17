@@ -1,11 +1,1 @@
-<apex:page controller="RecruitmentConfigWizardController">
-  <h1>Working in progress</h1>
-  <apex:form >
-      <apex:pageBlock title="Entity Configuration">
-      <apex:pageBlockButtons style="text-align:right;">
-        <apex:commandButton styleclass="btn" value="Previous" action="{!GoPrevious}"/>
-        <apex:commandButton styleclass="btn" value="Next" action="{!GoNext}"/>
-      </apex:pageBlockButtons>
-      </apex:pageBlock>
-   </apex:form>
-</apex:page>
+<apex:page > </apex:page>

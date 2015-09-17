@@ -1,0 +1,23 @@
+<!--
+    * Copyright (c) 2015 by {YOUR_COMPANY_NAME}, Inc.  All Rights Reserved.
+    * This software is the confidential and proprietary information of
+    * {YOUR_COMPANY_NAME}, Inc. ("Confidential Information").
+    * You shall not disclose such Confidential Information and shall use it
+    * only in accordance with the terms of the license agreement you entered
+    * into with {YOUR_COMPANY_NAME}.
+    *
+ -->
+<!--
+    * Description
+    * 
+    * @author 
+-->
+<apex:component controller="AppInformationController">
+    <apex:panelGrid columns="5" id="theGrid" title="App Information" frame="below" rules="cols" cellpadding="5px" border="1" >
+        <apex:outputText value="{!AppPrefix}" />
+        <apex:outputText value="{!AppVersion}"/>
+        <apex:outputText value="{!AppLanguage}" />
+        <apex:outputText value="{!CurrentUser}" />
+        <apex:outputText value="{!CurrentUserLanguage}" />
+    </apex:panelGrid>
+</apex:component>
