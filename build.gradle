@@ -3,21 +3,36 @@
  * Licensed under the MIT license. See LICENSE file in the project root for full license information.
  */
 
+import org.fundacionjala.gradle.plugins.enforce.tasks.salesforce.deployment.Upload
+
 buildscript {
     repositories {        
         mavenCentral()
         jcenter()    
     }
     dependencies {
-		classpath 'org.fundacionjala.gradle.plugins.enforce:enforce-gradle-plugin:1.0.3'
+		classpath 'org.fundacionjala.gradle.plugins.enforce:enforce-gradle-plugin:1.1.2'
     }
 
 }
 
 apply plugin: 'enforce'
 
+project.ext {
+	credentialId = 'recruiment'
+}
+
 enforce {
     srcPath = 'src'
-    deleteTemporaryFiles = false
+    poll = 100
+    waitTime = 5
+    deleteTemporaryFiles = false    
+}
+
+task myCustomUpload(type:Upload) {
+    group = 'CustomTask'
+    description = "Uploads all classes,pages and component called 'AppInformation' less ContentActionsController class"
+    files='classes,pages,components/AppInformation.component'
+    excludes='*/ContentActionsController.cls'    
 }
 
